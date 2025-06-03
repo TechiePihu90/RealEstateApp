@@ -98,8 +98,7 @@ const Home = () => {
                       property.images.map((image, index) => (
                         <img
                           key={index}
-                          src={`${API_BASE_URL}/${image}`}
-                          
+                          src={`http://localhost:3000/${image}`}
                           alt={`Property ${index + 1}`}
                           className="h-full min-w-[150px] object-cover rounded-lg cursor-pointer"
                         />
@@ -134,7 +133,6 @@ const Home = () => {
 };
 
 export default Home;
-
 
 
 
