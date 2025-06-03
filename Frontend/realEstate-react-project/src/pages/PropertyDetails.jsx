@@ -5,6 +5,7 @@ import Slider from "react-slick"; // ✅ React Slick Import
 import "slick-carousel/slick/slick.css"; // ✅ Slick Styles
 import "slick-carousel/slick/slick-theme.css";
 import MapComponent from "../pages/components/MapComponent"; 
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const PropertyDetails = () => {
   const { id } = useParams();
@@ -39,16 +40,16 @@ const PropertyDetails = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-gray-800 text-white rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto p-6 bg-white text-black rounded-lg shadow-lg pt-20 ">
       {/* Property Title */}
-      <h1 className="text-3xl font-bold mb-4 text-white">{property.title}</h1>
+      <h1 className="text-3xl font-bold mb-4 text-black">{property.title}</h1>
 
       {/* ✅ Image Slider */}
       <Slider {...settings} className="mb-6">
         {property.images.map((img, index) => (
           <div key={index}>
             <img
-              src={`http://localhost:3000/${img}`}
+              src={`${API_BASE_URL}/${img}`}
               alt={`Property ${index + 1}`}
               className="w-full h-80 object-cover rounded-lg"
             />
@@ -57,20 +58,20 @@ const PropertyDetails = () => {
       </Slider>
 
       {/* Property Details */}
-      <p className="mt-4 text-gray-300 text-lg">{property.description}</p>
-      <p className="mt-2 text-xl font-semibold text-white">Price: ₹{property.price}</p>
-      <p className="mt-2 text-gray-300 text-lg">Location: {property.location}</p>
+      <p className="mt-4 text-black text-lg">{property.description}</p>
+      <p className="mt-2 text-xl font-semibold text-black">Price: ₹{property.price}</p>
+      <p className="mt-2 text-black text-lg">Location: {property.location}</p>
 
       {/* ✅ Leaflet.js OpenStreetMap Integration */}
       <div className="z=0  mt-8">
-        <h2 className="text-xl font-semibold text-white">Location on Map</h2>
+        <h2 className="text-xl font-semibold text-black">Location on Map</h2>
         <MapComponent latitude={property.latitude} longitude={property.longitude} />
       </div>
 
 
 
       {/* Owner Details */}
-      <div className="mt-6 p-4 border border-gray-600 rounded-lg bg-gray-700">
+      <div className="mt-6 p-4 border border-black rounded-lg bg-gray-700">
         <h2 className="text-xl font-semibold text-white">Owner Details</h2>
         <p className="text-gray-300"><strong>Name:</strong> {property.owner.name}</p>
         <p className="text-gray-300"><strong>Phone:</strong> {property.owner.phone}</p>

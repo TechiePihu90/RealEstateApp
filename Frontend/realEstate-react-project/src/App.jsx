@@ -5,6 +5,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Navbar from './pages/Navbar';
 import CreateProperty from './pages/CreateProperty';
+import Profile from "./pages/Profile";
+import EstimatePrice from "./pages/EstimatedPrice";
+
 import './App.css'
   // ✅ Import CreateProperty
 
@@ -18,6 +21,9 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/create-property" element={<CreateProperty />} />  {/* ✅ Add this */}
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/estimate-price" element={<EstimatePrice />} />
+
       </Routes>
     </Router>
   );

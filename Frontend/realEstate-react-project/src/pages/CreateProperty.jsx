@@ -63,23 +63,23 @@ function CreateProperty() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900 p-4">
-      <div className="bg-gray-800 text-white max-w-lg w-full p-6 rounded-lg shadow-lg">
+    <div className="flex items-center justify-center min-h-screen  p-4">
+      <div className="bg-white text-black max-w-lg w-full p-6 rounded-lg shadow-lg">
         <h2 className="text-3xl font-semibold text-center mb-6">Create a New Property</h2>
         <form action="/multiple-upload" encType="multipart/form-data" method="POST"  onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
-          <textarea name="description" placeholder="Description" value={formData.description} onChange={handleChange} className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
-          <input type="number" name="price" placeholder="Price" value={formData.price} onChange={handleChange} className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
-          <input type="text" name="location" placeholder="Location" value={formData.location} onChange={handleChange} className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
+          <input type="text" name="title" placeholder="Title" value={formData.title} onChange={handleChange} className="w-full p-3  border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
+          <textarea name="description" placeholder="Description" value={formData.description} onChange={handleChange} className="w-full p-3  border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
+          <input type="number" name="price" placeholder="Price" value={formData.price} onChange={handleChange} className="w-full p-3  border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
+          <input type="text" name="location" placeholder="Location" value={formData.location} onChange={handleChange} className="w-full p-3  border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500" required />
 
           {/* Image Upload */}
-          <div className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg">
+          <div className="w-full p-3  border border-gray-600 rounded-lg">
             <input
               multiple
               type="file"
               name="images"
               onChange={handleFileChange}
-              className="w-full text-gray-300 cursor-pointer"
+              className="w-full text-gray-600 cursor-pointer"
               required
             />
           </div>

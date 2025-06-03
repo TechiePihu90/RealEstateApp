@@ -1,12 +1,13 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3000/api";
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+
 
 
 // 🔹 User Signup
 export const registerUser = async (userData) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/users/register`, userData);
+      const response = await axios.post(`${API_BASE_URL}/api/users/register`, userData);
      console.log("Signup api response",response.data)
       return response.data;
     } catch (error) {
@@ -19,7 +20,7 @@ export const registerUser = async (userData) => {
 // 🔹 User Login
 export const loginUser = async (userData) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/users/login`, userData);
+    const response = await axios.post(`${API_BASE_URL}/api/users/login`, userData);
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -29,7 +30,7 @@ export const loginUser = async (userData) => {
 // 🔹 Fetch All Properties
 export const getProperties = async () => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/properties`);
+    const response = await axios.get(`${API_BASE_URL}/api/properties`);
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -39,7 +40,7 @@ export const getProperties = async () => {
 // 🔹 Fetch Property By ID
 export const getPropertyById = async (id) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/properties/${id}`);
+    const response = await axios.get(`${API_BASE_URL}/api/properties/${id}`);
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -49,7 +50,7 @@ export const getPropertyById = async (id) => {
 // 🔹 Create Property (Protected Route)
 export const createProperty = async (propertyData, token) => {
   try {
-    const response = await axios.post(`${API_BASE_URL}/properties`, propertyData, {
+    const response = await axios.post(`${API_BASE_URL}/api/properties`, propertyData, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -65,7 +66,7 @@ export const createProperty = async (propertyData, token) => {
 
 export const searchProperties = async (location) => {
   try {
-    const response = await axios.get(`${API_BASE_URL}/properties/search/${location}`);
+    const response = await axios.get(`${API_BASE_URL}/api/properties/search/${location}`);
     return response.data;
   } catch (error) {
     console.error("Search API Error:", error);

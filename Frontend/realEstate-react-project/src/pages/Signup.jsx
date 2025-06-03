@@ -34,56 +34,56 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-3xl font-bold text-white text-center mb-6">Create an Account</h2>
+    <div className="flex items-center justify-center min-h-screen ">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 className="text-3xl font-bold text-black text-center mb-6">Create an Account</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-400">Name</label>
+            <label className="block text-black">Name</label>
             <input 
               type="text" 
               name="name" 
               onChange={handleChange} 
               placeholder="Enter your name" 
               required 
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
 
           <div>
-            <label className="block text-gray-400">Email</label>
+            <label className="block text-black">Email</label>
             <input 
               type="email" 
               name="email" 
               onChange={handleChange} 
               placeholder="Enter your email" 
               required 
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
 
           <div>
-            <label className="block text-gray-400">Password</label>
+            <label className="block text-black">Password</label>
             <input 
               type="password" 
               name="password" 
               onChange={handleChange} 
               placeholder="Create a password" 
               required 
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
 
           <div>
-            <label className="block text-gray-400">Phone Number</label>
+            <label className="block text-black">Phone Number</label>
             <input 
               type="text" 
               name="phone" 
               onChange={handleChange} 
               placeholder="Enter your phone number" 
               required 
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
 
@@ -93,7 +93,7 @@ const Signup = () => {
               name="role" 
               onChange={handleChange} 
               required 
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
             >
               <option value="buyer">Buyer</option>
               <option value="seller">Seller</option>

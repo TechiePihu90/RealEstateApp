@@ -10,7 +10,7 @@ const app = express();
 // ✅ Enable CORS for frontend (http://localhost:5173)
 app.use(
   cors({
-    origin: "http://localhost:5173", // Allow frontend access
+    origin: process.env.FRONTEND_URL, // Allow frontend access
     methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
     allowedHeaders: ["Content-Type", "Authorization"], // Allowed headers
     credentials: true, // Allow cookies & authorization headers
@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 const userRoutes = require("./routes/userRoute");
 const propertyRoutes = require("./routes/propertyRoute");
 const bookingRoutes = require("./routes/bookingRoute");
-
+const profile = require("./routes/profileRoutes")
 // Connect to MongoDB
 connectDB();
 
@@ -37,7 +37,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/api/users", userRoutes);
 app.use("/api/properties", propertyRoutes);
 app.use("/api/bookings", bookingRoutes);
-
+app.use("/api/profile",profile);
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });

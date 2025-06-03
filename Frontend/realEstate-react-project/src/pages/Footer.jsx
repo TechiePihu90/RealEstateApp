@@ -3,7 +3,7 @@
 const Footer = () => {
 
   return (
-    <footer className="bg-gray-900 text-white p-8 mt-12">
+    <footer className="bg-gray-400 text-black mt-12 p-8">
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         
         <div>
@@ -40,13 +40,13 @@ const Footer = () => {
             <li>Contact Us</li>
             <li>Privacy Policy</li>
           </ul>
-          <p className="text-gray-400 mt-2">
+          <p className="text-black mt-2">
             📧 example@email.com | 📞 123-456-7890
           </p>
         </div>
       </div>
 
-      <div className="text-center mt-6 text-gray-400">
+      <div className="text-center mt-6 text-black">
         © 2025 Easy Homes. All Rights Reserved.
       </div>
     </footer>

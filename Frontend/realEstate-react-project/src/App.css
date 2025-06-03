@@ -1,7 +1,7 @@
 #root {
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
@@ -18,7 +18,7 @@
 
 /* Property Card */
 .property-card {
-  background: #1e293b;
+  background: #dde6ed;
   color: white;
   padding: 1rem;
   border-radius: 8px;

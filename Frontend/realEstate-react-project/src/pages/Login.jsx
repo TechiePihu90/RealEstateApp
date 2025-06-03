@@ -25,48 +25,51 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
-        <h2 className="text-3xl font-bold text-white text-center mb-6">Welcome Back</h2>
-        
+    <div
+      className="flex items-center justify-center min-h-screen"
+      style={{ backgroundColor: "#e4ebf5" }}
+    >
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 className="text-3xl font-bold text-black text-center mb-6">Welcome Back</h2>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-gray-400">Email</label>
-            <input 
+            <label className="block text-black">Email</label>
+            <input
               type="email"
               name="email"
               onChange={handleChange}
               placeholder="Enter your email"
               required
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
           <div>
-            <label className="block text-gray-400">Password</label>
-            <input 
+            <label className="block text-black">Password</label>
+            <input
               type="password"
               name="password"
               onChange={handleChange}
               placeholder="Enter your password"
               required
-              className="w-full px-4 py-2 mt-1 bg-gray-700 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-2 mt-1 bg-white text-black border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
-          {error && <p className="text-red-400 text-sm text-center">{error}</p>}
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
-          <button 
+          <button
             type="submit"
-            className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2 rounded-md transition duration-300"
+            className="w-full  hover:bg-blue-600 text-white font-semibold py-2 rounded-md transition duration-300"
           >
             Login
           </button>
         </form>
 
-        <p className="text-gray-400 text-sm text-center mt-4">
-          Don't have an account? 
-          <a href="/signup" className="text-red-500 hover:underline"> Sign up</a>
+        <p className="text-gray-600 text-sm text-center mt-4">
+          Don't have an account?
+          <a href="/signup" className="text-blue-500 hover:underline"> Sign up</a>
         </p>
       </div>
     </div>
@@ -74,4 +77,3 @@ const Login = () => {
 };
 
 export default Login;
-
