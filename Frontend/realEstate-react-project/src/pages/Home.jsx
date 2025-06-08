@@ -98,7 +98,7 @@ const Home = () => {
                       property.images.map((image, index) => (
                         <img
                           key={index}
-                          src={`http://localhost:3000/${image}`}
+                          src={`${API_BASE_URL}/${image}`}
                           alt={`Property ${index + 1}`}
                           className="h-full min-w-[150px] object-cover rounded-lg cursor-pointer"
                         />
