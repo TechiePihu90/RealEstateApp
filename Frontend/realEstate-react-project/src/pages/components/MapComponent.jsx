@@ -8,7 +8,10 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 
 //  Fix Leaflet marker image paths for Netlify/Vite
 delete L.Icon.Default.prototype._getIconUrl;
-
+L.Icon.Default.mergeOptions({
+  iconUrl: markerIcon,
+  shadowUrl: markerShadow,
+});
 
 
 const MapComponent = () => {
