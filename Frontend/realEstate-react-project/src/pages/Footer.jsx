@@ -41,7 +41,7 @@ const Footer = () => {
             <li>Privacy Policy</li>
           </ul>
           <p className="text-black mt-2">
-            📧 example@email.com | 📞 123-456-7890
+            📧 payalsaini@email.com | 📞 123-456-7890
           </p>
         </div>
       </div>
