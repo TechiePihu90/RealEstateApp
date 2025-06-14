@@ -49,7 +49,6 @@ const PropertyDetails = () => {
         {property.images.map((img, index) => (
           <div key={index}>
             <img
-              console.log("Image URL:", `${API_BASE_URL}/${img}`);
 
               src={`${API_BASE_URL}/${img}`}
               alt={`Property ${index + 1}`}
