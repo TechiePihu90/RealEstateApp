@@ -32,7 +32,10 @@ console.log("JWT_SECRET:", process.env.JWT_SECRET);
 const port = process.env.PORT || 3000;
 
 // Use routes
-app.use("/uploads", express.static("uploads"));
+const path = require("path");
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+
+// app.use("/uploads", express.static("uploads"));
 
 app.use("/api/users", userRoutes);
 app.use("/api/properties", propertyRoutes);
