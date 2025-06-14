@@ -8,12 +8,12 @@ app = Flask(__name__)
 CORS(app)
 
 # Load the model
-with open("ml-model/bangalore_price_model.pkl", "rb") as f:
+with open("bangalore_price_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 # Load the list of feature names (needed for encoding incoming data properly)
 # You can recreate it using the same steps as training
-df = pd.read_csv("ml-model/dataset/Bengaluru_House_Data.csv")
+df = pd.read_csv("dataset/Bengaluru_House_Data.csv")
 df = df.drop(['area_type', 'availability', 'society', 'balcony'], axis=1)
 df = df.dropna()
 df['bhk'] = df['size'].apply(lambda x: int(x.split(' ')[0]))
@@ -69,4 +69,4 @@ def predict():
         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+     app.run(host='0.0.0.0', port=10000)
