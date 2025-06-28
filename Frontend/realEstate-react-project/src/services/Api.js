@@ -77,7 +77,7 @@ export const searchProperties = async (location) => {
 export const deleteProperty = async (propertyId) => {
   try {
     const token = localStorage.getItem("token"); // Ensure the user is authenticated
-    await axios.delete(`${API_BASE_URL}/properties/${propertyId}`, {
+    await axios.delete(`${API_BASE_URL}/api/properties/${propertyId}`, {
       headers: { Authorization: `Bearer ${token}` },
     });
   } catch (error) {
