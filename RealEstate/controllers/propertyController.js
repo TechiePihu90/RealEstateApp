@@ -7,7 +7,9 @@ const createProperty = async (req, res) => {
     const { title, description, price, location } = req.body;
     const owner = req.user._id;
 
-    // ✅ Ensure unique file paths (prevent duplicates) & fix backslashes
+    //set automatically removes duplicates 
+    //req.files is array of uploaded images
+    //file.path gives full path to your server replace is used to replace \ to / 
     const images = [...new Set(req.files.map(file => file.path.replace(/\\/g, "/")))];
 
     const property = new Property({ title, description, price, location, images, owner });
