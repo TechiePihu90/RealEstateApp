@@ -23,7 +23,7 @@ const fileFilter = (req, file, cb) => {
 // Multer upload setup
 const upload = multer({ storage: storage, fileFilter: fileFilter });
 
-// ✅ Fix: Export `upload.array(...)`
+
 module.exports = upload
 
 
