@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 
-// ✅ Enable CORS for frontend (http://localhost:5173)
+
 app.use(
   cors({
     origin: process.env.FRONTEND_URL, // Allow frontend access
@@ -17,7 +17,7 @@ app.use(
   })
 );
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));  //parses form data
  // Middleware to parse JSON
 
 // Import routes
@@ -28,14 +28,11 @@ const profile = require("./routes/profileRoutes")
 // Connect to MongoDB
 connectDB();
 
-console.log("JWT_SECRET:", process.env.JWT_SECRET);
 const port = process.env.PORT || 3000;
 
 // Use routes
 const path = require("path");
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
-
-// app.use("/uploads", express.static("uploads"));
 
 app.use("/api/users", userRoutes);
 app.use("/api/properties", propertyRoutes);
