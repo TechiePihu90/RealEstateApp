@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-// ✅ GET /api/profile - Fetch user details and their properties
+// GET /api/profile - Fetch user details and their properties
 router.get("/", protect, async (req, res) => {
     try {
         // Fetch user details (excluding password)
@@ -38,7 +38,7 @@ router.get("/", protect, async (req, res) => {
     }
 });
 
-// ✅ POST /api/profile/upload-profile-pic - Upload & update profile picture
+// POST /api/profile/upload-profile-pic - Upload & update profile picture
 router.post("/upload-profile-pic", protect, upload.single("profilePic"), async (req, res) => {
     try {
         if (!req.file) {
