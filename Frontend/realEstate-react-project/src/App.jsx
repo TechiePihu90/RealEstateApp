@@ -8,8 +8,7 @@ import CreateProperty from './pages/CreateProperty';
 import Profile from "./pages/Profile";
 import EstimatePrice from "./pages/EstimatedPrice";
 
-import './App.css'
-  // ✅ Import CreateProperty
+import './App.css';
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
         <Route path="/property/:id" element={<PropertyDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/create-property" element={<CreateProperty />} />  {/* ✅ Add this */}
+        <Route path="/create-property" element={<CreateProperty />} />  
         <Route path="/profile" element={<Profile />} />
         <Route path="/estimate-price" element={<EstimatePrice />} />
 
