@@ -4,20 +4,18 @@ const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 
 
-// 🔹 User Signup
+// User Signup
 export const registerUser = async (userData) => {
     try {
       const response = await axios.post(`${API_BASE_URL}/api/users/register`, userData);
-     console.log("Signup api response",response.data)
       return response.data;
     } catch (error) {
-      console.error("Signup API Error:", error);
       throw error.response?.data || { message: "Something went wrong!" };
     }
   };
   
 
-// 🔹 User Login
+//User Login
 export const loginUser = async (userData) => {
   try {
     const response = await axios.post(`${API_BASE_URL}/api/users/login`, userData);
@@ -27,7 +25,7 @@ export const loginUser = async (userData) => {
   }
 };
 
-// 🔹 Fetch All Properties
+// Fetch All Properties
 export const getProperties = async () => {
   try {
     const response = await axios.get(`${API_BASE_URL}/api/properties`);
@@ -37,7 +35,7 @@ export const getProperties = async () => {
   }
 };
 
-// 🔹 Fetch Property By ID
+// Fetch Property By ID
 export const getPropertyById = async (id) => {
   try {
     const response = await axios.get(`${API_BASE_URL}/api/properties/${id}`);
@@ -47,7 +45,7 @@ export const getPropertyById = async (id) => {
   }
 };
 
-// 🔹 Create Property (Protected Route)
+// Create Property (Protected Route)
 export const createProperty = async (propertyData, token) => {
   try {
     const response = await axios.post(`${API_BASE_URL}/api/properties`, propertyData, {
@@ -69,7 +67,6 @@ export const searchProperties = async (location) => {
     const response = await axios.get(`${API_BASE_URL}/api/properties/search/${location}`);
     return response.data;
   } catch (error) {
-    console.error("Search API Error:", error);
     throw error.response?.data || { message: "Something went wrong!" };
   }
 };
