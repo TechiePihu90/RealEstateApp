@@ -26,13 +26,13 @@ function CreateProperty() {
   };
 
   const handleFileChange = (e) => {
-    console.log("File input changed!"); // Debugging check
+    console.log("File input changed!"); 
     const files = Array.from(e.target.files);
-    console.log("Selected Files:", files); // Check if files are being received
+    console.log("Selected Files:", files); 
   
     setFormData((prevFormData) => ({
       ...prevFormData,
-      images: [...prevFormData.images, ...files], // Properly updating array
+      images: [...prevFormData.images, ...files], 
     }));
   
     const previews = files.map((file) => URL.createObjectURL(file));
