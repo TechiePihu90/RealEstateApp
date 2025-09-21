@@ -50,7 +50,7 @@ const Home = () => {
   return (
     <div className="text-white min-h-screen bg-#d9dce4">
 
-      {/* ✅ Hero Section Start */}
+      {/* Hero Section Start */}
       <div
         className="relative w-full h-screen   bg-center flex items-center justify-center mx-0 px-0 ">
        <img
@@ -84,7 +84,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* ✅ Hero Section End */}
+      {/* Hero Section End */}
 
       <div className="p-6">
         <h2 className="text-2xl text-black  font-bold my-4">Properties</h2>
